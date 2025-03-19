@@ -35,14 +35,14 @@ public class FXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
 
-        FXVulembereList list = new FXVulembereList(); 
+        FXVulembereList list = new FXVulembereList();
         list.setSize(10, 200, 100, 100, 300, 200);
         list.setSeparatorVertical(true);
         ArrayList<ArrayList<String>> data = getListe_data();
-        ScrollPane ScrollPane = list.getList(data);
+        ScrollPane ScrollPane = list.getList(data, "Liste");
 
         pan.getChildren().add(ScrollPane);
-        
+
         btnPrint.setOnAction((event) -> {
             try {
                 TablePrint.Print(data);

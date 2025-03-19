@@ -33,7 +33,7 @@ public class FXVulembereList {
     private boolean separatorVertical;
     private int space;
 
-    public ScrollPane getList(ArrayList<ArrayList<String>> data) {
+    public ScrollPane getList(ArrayList<ArrayList<String>> data, String title) {
 
         System.out.println(data);
         VBox list = new VBox();
@@ -63,7 +63,7 @@ public class FXVulembereList {
 
         return scrollPane;
     }
- 
+
     private int color_alternance = 0;
 
     public HBox boxColmun(List<String> row) {
